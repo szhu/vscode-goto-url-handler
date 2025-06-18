@@ -1,0 +1,33 @@
+{
+  "name": "quick-open-handler",
+  "displayName": "Quick Open URL Handler",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Registers a URL handler to open files using the 'Go To File' command.",
+  "categories": [
+    "Other"
+  ],
+  "publisher": "szhu",
+  "main": "./extension.js",
+  "files": [
+    "extension.js"
+  ],
+  "scripts": {
+    "format:check": "prettier --check . && eslint .",
+    "format:write": "prettier --write . && eslint --fix .",
+    "package": "yes | vsce package --yarn --allow-missing-repository"
+  },
+  "activationEvents": [
+    "onUri"
+  ],
+  "devDependencies": {
+    "eslint": "9.29.0",
+    "eslint-plugin-sort-keys-fix": "1.1.2",
+    "prettier": "3.5.3",
+    "prettier-plugin-packagejson": "2.5.15",
+    "prettier-plugin-sort-json": "4.1.1"
+  },
+  "engines": {
+    "vscode": "^1.80.0"
+  }
+}
